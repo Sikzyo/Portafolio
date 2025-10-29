@@ -4,7 +4,11 @@ export default function Navbar({ isOpen }) {
   const [isItem, setItem] = useState(0);
   const [isSelect, setSelect] = useState({ width: 0, left: 0 });
 
-  const botones = ["Inicio", "Sobre mí", "Hoja de vida"];
+  const botones = [
+    { name: "Inicio", url: "/" },
+    { name: "Sobre mí", url: "/about" },
+    { name: "Hoja de vida", url: "/docs/cv_jair_ochoa.pdf" },
+  ];
 
   const refs = useRef([]);
 
@@ -27,6 +31,7 @@ export default function Navbar({ isOpen }) {
         {botones.map((button, index) => {
           return (
             <a
+              href={button.url}
               className={`flex w-full h-11 items-center text-2xl font-manrope text-texto-2 font-bold  md:px-4 md:text-base md:rounded-lg z-10 cursor-pointer transition-all duration-300 ease-in-out ${
                 isItem === index ? "md:text-botones" : "md:text-texto-2"
               }`}
@@ -36,7 +41,7 @@ export default function Navbar({ isOpen }) {
                 refs.current[index] = a;
               }}
             >
-              {button}
+              {button.name}
             </a>
           );
         })}

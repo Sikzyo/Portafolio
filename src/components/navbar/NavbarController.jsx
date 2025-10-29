@@ -1,5 +1,5 @@
 // Componentes
-import HamburgerButton from "./hamburgerButton.jsx";
+import HamburgerButton from "./HamburgerButton.jsx";
 import Navbar from "./Navbar.jsx";
 
 import { useState } from "react";
