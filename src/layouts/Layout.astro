@@ -1,12 +1,23 @@
+---
+// Estilos
+import "../styles/global.css";
+
+// Componentes
+import Header from "../components/Header.astro";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro Basics</title>
+    <title>Sikzyo</title>
   </head>
-  <body>
+  <body
+    class="flex flex-col p-6 bg-linear-to-b from-fondo-1 from-50% to-fondo-2 gap-8 md:p-8 md:gap-10"
+  >
+    <Header />
     <slot />
   </body>
 </html>
