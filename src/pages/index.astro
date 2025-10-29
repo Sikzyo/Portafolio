@@ -1,8 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout />
+<Layout>
+  <main class="flex flex-col gap-8 pt-[76px] h-full md:gap-10 md:pt-[100px]">
+    <section class="flex flex-col gap-6 md:gap-8">
+      <h1 class="font-sora text-2xl font-light md:text-[40px]">
+        ¡Hola, soy <span class="font-manrope font-bold text-texto-2"
+          >Jair Ochoa</span
+        >!
+      </h1>
+      <p class="font-sora font-light md:text-2xl">
+        Diseñador y desarrollador web enfocado en crear soluciones digitales
+        efectivas, centradas en la experiencia del usuario.
+      </p>
+      <aside class="flex gap-2 font-sora font-light md:text-2xl">
+        <p>Actualmente:</p>
+        <section class="flex gap-2">
+          <span class="font-medium text-texto-2">Freelance</span>
+        </section>
+      </aside>
+    </section>
+    <section class="flex flex-col gap-8 h-full">juan</section>
+  </main>
+</Layout>
