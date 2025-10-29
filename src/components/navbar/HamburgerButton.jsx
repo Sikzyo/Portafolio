@@ -3,7 +3,7 @@ import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 export default function HamburgerButton({ isOpen, toggleMenu }) {
   return (
     <button
-      className="flex items-center justify-center w-11 h-11 bg-botones rounded-lg text-texto-2 z-10 backdrop-blur-sm md:hidden"
+      className="flex items-center justify-center w-11 h-11 bg-botones/75 rounded-lg text-texto-2 z-10 backdrop-blur-sm md:hidden"
       onClick={toggleMenu}
     >
       <Cross1Icon
