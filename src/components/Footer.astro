@@ -1,0 +1,42 @@
+---
+// Assets
+import LinkedIn from "../assets/linkedin.svg";
+import X from "../assets/x.svg";
+import GitHub from "../assets/github_light.svg";
+
+const time = new Date().getFullYear();
+---
+
+<footer class="flex flex-col gap-4">
+  <p class="font-sora font-medium text-center md:text-start md:text-xl">
+    ¿Te gusta lo que ves? Hablemos
+  </p>
+  <section class="flex w-full justify-center gap-2 md:justify-start md:gap-4">
+    <a
+      href="https://www.linkedin.com/in/jair-ochoa"
+      target="_blank"
+      class="flex justify-center items-center h-11 w-11"
+    >
+      <LinkedIn class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+    </a>
+    <a
+      href="https://x.com/sikzyo"
+      target="_blank"
+      class="flex justify-center items-center h-11 w-11"
+    >
+      <X class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+    </a>
+    <a
+      href="https://github.com/Sikzyo"
+      target="_blank"
+      class="flex justify-center items-center h-11 w-11"
+    >
+      <GitHub class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+    </a>
+  </section>
+  <section class="flex justify-between font-sora font-light text-sm md:text-lg">
+    <small>©Sikzyo {time}</small>
+    <small>Hecho con 🧡</small>
+    <small>Bogotá, Colombia</small>
+  </section>
+</footer>
