@@ -1,8 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function Navbar({ isOpen }) {
-  const [isItem, setItem] = useState(0);
-  const [isSelect, setSelect] = useState({ width: 0, left: 0 });
+// Custom hook
+import useNavbar from "../../hooks/useNavbar.js";
+
+export default function Navbar() {
+  const isOpen = useNavbar((state) => state.isOpen);
+  const closeMenu = useNavbar((state) => state.closeMenu);
+
+  const isItem = useNavbar((state) => state.item);
+  const setItem = useNavbar((state) => state.setItem);
+
+  const isSelect = useNavbar((state) => state.isSelect);
+  const setSelect = useNavbar((state) => state.setSelect);
 
   const botones = [
     { name: "Inicio", url: "/" },
@@ -36,7 +45,10 @@ export default function Navbar({ isOpen }) {
                 isItem === index ? "md:text-botones" : "md:text-texto-2"
               }`}
               key={index}
-              onClick={() => setItem(index)}
+              onClick={() => {
+                setItem(index);
+                closeMenu();
+              }}
               ref={(a) => {
                 refs.current[index] = a;
               }}
