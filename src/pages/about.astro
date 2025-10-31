@@ -1,0 +1,43 @@
+---
+// Layout
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// Assets
+import ProfilePicture from "../assets/image/ProfilePicture.webp";
+---
+
+<Layout>
+  <main
+    class="flex flex-col gap-8 pt-[76px] h-full grow md:gap-10 md:pt-[100px]"
+  >
+    <section class="flex flex-col gap-6 md:flex-row-reverse">
+      <Image
+        src={ProfilePicture}
+        alt="Imagen de Jair Ochoa"
+        class="rounded-2xl md:max-w-72 lg:max-w-96"
+      />
+      <section class="flex flex-col gap-8">
+        <h1
+          class="font-manrope font-bold text-4xl text-center text-texto-2 md:text-start lg:text-5xl"
+        >
+          Jair Ochoa
+        </h1>
+        <aside class="flex flex-col gap-4 font-sora font-light">
+          <p>
+            Hola, ¡Mucho gusto! Mi nombre es Jair Ochoa, diseñador y
+            desarrollador graduado en Diseño Interactivo de la universidad Jorge
+            Tadeo Lozano.
+          </p>
+          <p>
+            Me especializo en planificar, diseñar y ejecutar proyectos de
+            desarrollo web y móvil que resuelven problemáticas específicas. Mi
+            enfoque se centra en entender las necesidades de las personas y,
+            mediante diversas metodologías, generar soluciones funcionales que
+            conecten con ellas.
+          </p>
+        </aside>
+      </section>
+    </section>
+  </main>
+</Layout>

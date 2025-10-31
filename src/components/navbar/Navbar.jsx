@@ -22,6 +22,11 @@ export default function Navbar() {
   const refs = useRef([]);
 
   useEffect(() => {
+    const pathName = window.location.pathname;
+    setItem(botones.findIndex((button) => button.url === pathName));
+  }, []);
+
+  useEffect(() => {
     const currentRef = refs.current[isItem];
     if (currentRef) {
       const { offsetLeft, offsetWidth } = currentRef;

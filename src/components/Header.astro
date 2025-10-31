@@ -1,17 +1,19 @@
 ---
-// Recursos
-import Logotipo from "../assets/Logo.svg";
+// Assets
+import Logotipo from "../assets/svg/Logo.svg";
 
 // Componentes
-import Navbar from "./navbar/NavbarController.jsx";
+import Navbar from "./navbar/Navbar.jsx";
+import HamburgerButton from "./navbar/HamburgerButton";
 ---
 
 <header class="flex justify-between items-center fixed w-full left-0 px-6">
   <a
     href="/"
-    class="flex px-4 py-2 rounded-lg w-fit bg-botones/75 z-10 backdrop-blur-sm md:px-6 md:py-3"
+    class="flex max-w-7xl px-4 py-2 rounded-lg w-fit bg-botones/75 z-10 backdrop-blur-sm md:px-6 md:py-3"
   >
     <Logotipo class="fill-texto-2 h-6 md:h-7" />
   </a>
   <Navbar client:load />
+  <HamburgerButton client:load />
 </header>
