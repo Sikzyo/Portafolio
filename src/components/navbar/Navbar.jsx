@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 // Custom hook
 import useNavbar from "../../hooks/useNavbar.js";
@@ -46,7 +46,9 @@ export default function Navbar() {
             <a
               href={button.url}
               className={`flex w-full h-11 items-center text-2xl font-manrope text-texto-2 font-bold  md:px-4 md:text-base md:rounded-lg z-10 cursor-pointer transition-all duration-300 ease-in-out ${
-                isItem === index ? "md:text-botones" : "md:text-texto-2"
+                isItem === index
+                  ? "md:text-botones md:bg-texto-2 "
+                  : "md:text-texto-2"
               }`}
               key={index}
               onClick={() => {
@@ -61,13 +63,13 @@ export default function Navbar() {
             </a>
           );
         })}
-        <div
+        {/* <div
           className="hidden md:block absolute transition-all duration-300 ease-in-out bg-texto-2 h-11 rounded-lg cursor-none"
           style={{
             width: `${isSelect.width}px`,
             transform: `translateX(${isSelect.left}px)`,
           }}
-        ></div>
+        ></div> */}
       </section>
     </nav>
   );
