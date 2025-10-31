@@ -31,7 +31,6 @@ export default function Navbar() {
     if (currentRef) {
       const { offsetLeft, offsetWidth } = currentRef;
       setSelect({ left: offsetLeft, width: offsetWidth });
-      console.log(isItem);
     }
   }, [isItem]);
 
