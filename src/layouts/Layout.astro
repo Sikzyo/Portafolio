@@ -8,6 +8,9 @@ import Footer from "../components/Footer.astro";
 
 // Transiciones
 import { ClientRouter } from "astro:transitions";
+
+// Analytics
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -18,6 +21,7 @@ import { ClientRouter } from "astro:transitions";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Sikzyo</title>
     <ClientRouter />
+    <Analytics />
   </head>
   <body
     class="flex flex-col p-6 bg-linear-to-b from-fondo-1 from-50% to-fondo-2 bg-fixed gap-8 md:p-8 md:gap-10"
