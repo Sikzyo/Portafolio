@@ -11,6 +11,7 @@ export default function HamburgerButton() {
     <button
       className="flex items-center justify-center w-11 h-11 bg-botones/75 rounded-lg text-texto-2 z-10 backdrop-blur-sm md:hidden"
       onClick={toggleMenu}
+      aria-label="Hamburger Menu"
     >
       <Cross1Icon
         className={`absolute transition-all duration-300 ease-in-out ${
