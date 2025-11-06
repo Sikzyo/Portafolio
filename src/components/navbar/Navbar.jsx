@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 h-full w-full transition-all duration-300 ease-in-out bg-linear-to-b from-fondo-1/75 from-50% to-fondo-2/75 backdrop-blur-sm px-6 pt-24 pb-6 md:static md:flex md:px-2 md:py-2 md:w-fit md:gap-4 md:bg-none md:bg-botones md:rounded-xl ${
+      className={`fixed top-0 h-full w-full transition-all duration-300 ease-in-out bg-linear-to-b from-fondo-1/75 from-50% to-fondo-2/75 backdrop-blur-sm px-6 pt-24 pb-6 md:static md:flex md:px-2 md:py-2 md:w-fit md:gap-4 md:bg-none md:bg-botones/75 md:rounded-xl ${
         isOpen ? "right-0" : "right-full"
       }`}
     >
