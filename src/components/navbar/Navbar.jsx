@@ -3,6 +3,9 @@ import { useEffect, useRef } from "react";
 // Custom hook
 import useNavbar from "../../hooks/useNavbar.js";
 
+// Componentes
+import DarkMode from "../../components/darkMode.jsx";
+
 export default function Navbar() {
   const isOpen = useNavbar((state) => state.isOpen);
   const closeMenu = useNavbar((state) => state.closeMenu);
@@ -36,7 +39,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 h-full w-full transition-all duration-300 ease-in-out bg-linear-to-b from-fondo-1/75 from-50% to-fondo-2/75 backdrop-blur-sm px-6 pt-24 pb-6 md:static md:flex md:px-2 md:py-2 md:w-fit md:gap-4 md:bg-none md:bg-botones/75 md:rounded-xl ${
+      className={`fixed top-0 h-full w-full bg-linear-to-b from-white-bg-1/75 from-50% to-white-bg-2/75 dark:from-dark-bg-1/75 dark:to-dark-bg-2/75 backdrop-blur-sm px-6 pt-24 pb-6 md:static md:flex md:px-2 md:py-2 md:w-fit md:gap-4 md:bg-none md:bg-white-button/75 dark:md:bg-dark-button/75 md:rounded-xl ${
         isOpen ? "right-0" : "right-full"
       }`}
     >
@@ -45,10 +48,10 @@ export default function Navbar() {
           return (
             <a
               href={button.url}
-              className={`flex w-full h-11 items-center text-2xl font-manrope text-texto-2 font-bold  md:px-4 md:text-base md:rounded-lg z-10 cursor-pointer transition-all duration-300 ease-in-out ${
+              className={`flex w-full h-11 items-center text-2xl font-manrope text-white-orange dark:text-dark-purple font-bold  md:px-4 md:text-base md:rounded-lg z-10 cursor-pointer ${
                 isItem === index
-                  ? "md:text-botones md:bg-texto-2 "
-                  : "md:text-texto-2"
+                  ? "md:text-white-button dark:md:text-dark-button md:bg-white-orange dark:md:bg-dark-purple"
+                  : "md:text-white-orange dark:md:text-dark-purple"
               }`}
               key={index}
               onClick={() => {
@@ -63,8 +66,11 @@ export default function Navbar() {
             </a>
           );
         })}
+        <section>
+          <DarkMode></DarkMode>
+        </section>
         {/* <div
-          className="hidden md:block absolute transition-all duration-300 ease-in-out bg-texto-2 h-11 rounded-lg cursor-none"
+          className="hidden md:block absolute transition-all duration-300 ease-in-out bg-white-orange dark:bg-dark-purple h-11 rounded-lg cursor-none"
           style={{
             width: `${isSelect.width}px`,
             transform: `translateX(${isSelect.left}px)`,

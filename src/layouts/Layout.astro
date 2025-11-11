@@ -27,9 +27,15 @@ import Analytics from "@vercel/analytics/astro";
     <meta name="theme-color" content="#FFFCF8" />
     <ClientRouter />
     <Analytics />
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark"
+      );
+    </script>
   </head>
   <body
-    class="flex flex-col p-6 bg-linear-to-b from-fondo-1 from-50% to-fondo-2 bg-fixed gap-8 font-sora items-center md:p-8 md:gap-10"
+    class="flex flex-col p-6 bg-linear-to-b from-white-bg-1 from-50% to-white-bg-2 dark:from-dark-bg-1 dark:to-dark-bg-2 bg-fixed gap-8 font-sora items-center dark:text-white md:p-8 md:gap-10"
   >
     <Header />
     <slot />

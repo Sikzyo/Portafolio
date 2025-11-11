@@ -9,7 +9,7 @@ export default function HamburgerButton() {
 
   return (
     <button
-      className="flex items-center justify-center w-11 h-11 bg-botones/75 rounded-lg text-texto-2 z-10 backdrop-blur-sm md:hidden"
+      className="flex items-center justify-center w-11 h-11 bg-white-button/75 dark:bg-dark-button/75 rounded-lg text-white-orange dark:text-dark-purple z-10 backdrop-blur-sm md:hidden"
       onClick={toggleMenu}
       aria-label="Hamburger Menu"
     >

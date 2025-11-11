@@ -1,8 +1,10 @@
 ---
 // Assets
 import LinkedIn from "../assets/svg/linkedin.svg";
-import X from "../assets/svg/x.svg";
-import GitHub from "../assets/svg/github_light.svg";
+import XBlack from "../assets/svg/x.svg";
+import GitHubBlack from "../assets/svg/github_light.svg";
+import XWhite from "../assets/svg/x_dark.svg";
+import GitHubWhite from "../assets/svg/github_dark.svg";
 
 const time = new Date().getFullYear();
 ---
@@ -26,7 +28,8 @@ const time = new Date().getFullYear();
       class="flex justify-center items-center h-11 w-11"
       aria-label="Twitter"
     >
-      <X class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+      <XBlack class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 dark:hidden" />
+      <XWhite class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 hidden dark:block" />
     </a>
     <a
       href="https://github.com/Sikzyo"
@@ -34,12 +37,16 @@ const time = new Date().getFullYear();
       class="flex justify-center items-center h-11 w-11"
       aria-label="GitHub"
     >
-      <GitHub class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+      <GitHubBlack class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 dark:hidden" />
+      <GitHubWhite
+        class="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 hidden dark:block"
+      />
     </a>
   </section>
   <section class="flex justify-between font-sora font-light text-sm md:text-lg">
     <small>©Sikzyo {time}</small>
-    <small>Hecho con 🧡</small>
+    <small class="dark:hidden">Hecho con 🧡</small>
+    <small class="hidden dark:block">Hecho con 💜</small>
     <small>Bogotá, Colombia</small>
   </section>
 </footer>
