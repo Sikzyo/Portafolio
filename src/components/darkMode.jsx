@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
-
+import { useEffect } from "react";
 import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
+import useDarkMode from "../hooks/useDarkMode.js";
 
 export default function darkModeToggle() {
-  const [theme, setTheme] = useState(null);
+  const setTheme = useDarkMode((state) => state.setTheme);
+  const theme = useDarkMode((state) => state.theme);
 
   useEffect(() => {
     const isDark = localStorage.theme || "light";
@@ -27,12 +28,12 @@ export default function darkModeToggle() {
     >
       <SunIcon
         className={`absolute transition-all duration-300 ease-in-out ${
-          theme === "light" ? "opacity-0" : "opacity-100"
+          theme === "light" ? "opacity-0 scale-0" : "opacity-100 scale-100"
         } `}
       />
       <MoonIcon
         className={`absolute transition-all duration-300 ease-in-out ${
-          theme !== "light" ? "opacity-0" : "opacity-100"
+          theme !== "light" ? "opacity-0 scale-0" : "opacity-100 scale-100"
         } `}
       />
     </button>
