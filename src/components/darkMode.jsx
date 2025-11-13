@@ -25,6 +25,7 @@ export default function darkModeToggle() {
       onClick={() => {
         toggleDarkMode();
       }}
+      aria-label="Botón para alternar modo oscuro"
     >
       <SunIcon
         className={`absolute transition-all duration-300 ease-in-out ${

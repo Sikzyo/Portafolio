@@ -45,8 +45,8 @@ export default function Navbar() {
         isOpen ? "right-0" : "right-full"
       } ${
         theme === "light"
-          ? "from-white-bg-1/75 to-white-bg-2/75 md:bg-white-button/75"
-          : "dark:from-dark-bg-1/75 dark:to-dark-bg-2/75 dark:md:bg-dark-button/75"
+          ? "from-white-bg-1/75 to-white-bg-2/75 md:bg-white-button/75 "
+          : "dark:from-dark-bg-1/75 dark:to-dark-bg-2/75 dark:md:bg-dark-button/75 "
       }}`}
     >
       <section className="flex flex-col gap-4 relative md:flex-row md:text-nowrap">
